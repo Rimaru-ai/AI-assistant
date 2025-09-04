@@ -15,10 +15,9 @@ tiktoken
 sentence-transformers
 faiss-cpu==1.7.4
 
-# Hugging Face (CPU only Torch)
-torch==2.2.2+cpu
-torchvision==0.17.2+cpu
---extra-index-url https://download.pytorch.org/whl/cpu
+# Hugging Face (safe Torch + Transformers)
+torch==2.2.2
+torchvision==0.17.2
 transformers
 accelerate
 
