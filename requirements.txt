@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+matplotlib
+faiss-cpu
+sentence-transformers
+transformers
+langchain
+langchain-community
+langchain-openai
+pypdf
+PyMuPDF
+tiktoken
+openai
