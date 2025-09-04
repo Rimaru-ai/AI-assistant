@@ -45,6 +45,30 @@
 
 
 
+# from config import USE_PRO_MODE
+
+# def load_embeddings():
+#     if USE_PRO_MODE:
+#         from langchain_openai import OpenAIEmbeddings
+#         return OpenAIEmbeddings(model="text-embedding-3-small")
+#     else:
+#         from sentence_transformers import SentenceTransformer
+#         # small, fast model for embeddings
+#         return SentenceTransformer("all-MiniLM-L6-v2")
+
+# def load_llm():
+#     from config import USE_PRO_MODE
+#     if USE_PRO_MODE:
+#         from langchain_openai import ChatOpenAI
+#         return ChatOpenAI(model="gpt-4o-mini", temperature=0)
+#     else:
+#         from transformers import pipeline
+#         # Use a lightweight model with safetensors to avoid torch issues
+#         return pipeline("text-generation", model="distilgpt2")
+
+
+
+
 from config import USE_PRO_MODE
 
 def load_embeddings():
@@ -56,12 +80,15 @@ def load_embeddings():
         # small, fast model for embeddings
         return SentenceTransformer("all-MiniLM-L6-v2")
 
+
 def load_llm():
     from config import USE_PRO_MODE
     if USE_PRO_MODE:
         from langchain_openai import ChatOpenAI
         return ChatOpenAI(model="gpt-4o-mini", temperature=0)
     else:
-        from transformers import pipeline
-        # Use a lightweight model with safetensors to avoid torch issues
-        return pipeline("text-generation", model="distilgpt2")
+        # Instead of a real LLM, just return a dummy function
+        class DummyLLM:
+            def __call__(self, prompt, **kwargs):
+                return [{"generated_text": f"(Demo Mode) You asked: {prompt}"}]
+        return DummyLLM()
