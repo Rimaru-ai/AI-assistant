@@ -4,7 +4,7 @@ It analyzes sales data and research papers, generates forecasts, and answers nat
 
 This project demonstrates both a traditional AI application and an upgraded Agentic AI-ready application, with a toggle to switch between Free Mode (local models) and Pro Mode (OpenAI GPT).
 
-🚀 Features
+#🚀 Features
 
 📊 Sales Data Analysis → Upload CSV files, view trends, KPIs, and forecasts.
 
@@ -18,7 +18,7 @@ Pro Mode → Runs on OpenAI GPT models (requires API key).
 
 🧠 Agentic AI Upgrade Ready → Capable of planning, reasoning, and tool use.
 
-🛠️ Installation (Local Development)
+# 🛠️ Installation (Local Development)
 
 Clone the repo and install dependencies:
 
@@ -31,14 +31,14 @@ Run locally:
 
 streamlit run app.py
 
-⚙️ Configuration
+# ⚙️ Configuration
 
 Control the app mode in config.py:
 
 USE_PRO_MODE = False  # Free Mode (local models)
 USE_PRO_MODE = True   # Pro Mode (OpenAI GPT)
 
-🔹 Free Mode
+# 🔹 Free Mode
 
 Uses sentence-transformers and Hugging Face local models.
 
@@ -46,7 +46,7 @@ No API key required.
 
 Slower but cost-free.
 
-🔹 Pro Mode
+# 🔹 Pro Mode
 
 Uses OpenAI GPT models for higher quality results.
 
@@ -54,7 +54,7 @@ Requires setting your API key:
 
 export OPENAI_API_KEY="your_api_key_here"
 
-☁️ Deployment on Streamlit Cloud
+# ☁️ Deployment on Streamlit Cloud
 
 Push this repo to GitHub.
 
@@ -76,7 +76,7 @@ Your app will be live at:
 
 https://<your-username>-insightforge-ai.streamlit.app
 
-📂 Project Structure
+# 📂 Project Structure
 ├── app.py              # Main Streamlit app
 ├── config.py           # Mode toggle (Free / Pro)
 ├── models.py           # LLMs and embeddings setup
@@ -84,7 +84,7 @@ https://<your-username>-insightforge-ai.streamlit.app
 ├── requirements.txt    # Dependencies
 └── README.md           # Project documentation
 
-📌 Example Workflow
+# 📌 Example Workflow
 
 Upload sales_data.csv.
 
@@ -98,7 +98,7 @@ Ask: “Which forecasting model works best for this dataset?”
 
 App queries the papers and suggests methods.
 
-🎯 Why This Project
+# 🎯 Why This Project
 
 Demonstrates AI + Data Science + Agentic AI concepts in one application.
 
@@ -106,7 +106,7 @@ Built with cost control in mind (Free vs Pro Mode).
 
 Perfect for portfolio/CV visibility.
 
-📦 Requirements
+# 📦 Requirements
 
 See requirements.txt
  for the full list.
