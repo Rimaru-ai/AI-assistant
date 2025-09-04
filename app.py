@@ -113,3 +113,23 @@ if user_query:
     except Exception as e:
         st.error(f"Error generating response: {e}")
 
+
+# --------------------------
+# Sidebar Settings
+# --------------------------
+st.sidebar.header("⚙️ App Settings")
+st.sidebar.write(f"**Pro Mode Enabled:** {config.USE_PRO_MODE}")
+
+if config.USE_PRO_MODE:
+    api_key = st.sidebar.text_input("🔑 Enter OpenAI API Key", type="password")
+
+    if api_key:
+        import os
+        os.environ["OPENAI_API_KEY"] = api_key
+        st.sidebar.success("API key set for this session ✅")
+    else:
+        st.sidebar.warning("Please enter your OpenAI API key to use Pro Mode.")
+else:
+    st.sidebar.info("🆓 Running in Free Mode (local/demo models).")
+
+
