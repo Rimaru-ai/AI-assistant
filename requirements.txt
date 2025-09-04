@@ -16,7 +16,7 @@ sentence-transformers
 faiss-cpu==1.7.4
 
 # Hugging Face (safe Torch + Transformers)
-torch==2.2.2
+torch>=2.6
 torchvision==0.17.2
 transformers
 accelerate
