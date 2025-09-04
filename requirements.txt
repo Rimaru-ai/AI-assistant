@@ -11,15 +11,17 @@ langchain-community
 langchain-openai
 tiktoken
 
-# NLP Embeddings
+# Embeddings
 sentence-transformers
-faiss-cpu
+faiss-cpu==1.7.4
 
-# Hugging Face Transformers (for Free Mode local models)
+# Hugging Face (CPU only Torch)
+torch==2.2.2+cpu
+torchvision==0.17.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
 transformers
-torch
 accelerate
 
 # PDF Handling
 pypdf
-PyMuPDF
+pymupdf==1.24.9
