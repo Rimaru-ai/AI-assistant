@@ -86,3 +86,30 @@ try:
 except Exception as e:
     st.error(f"🚨 Startup error: {e}")
     st.stop()
+
+# --------------------------
+# Q&A / Chat with AI
+# --------------------------
+st.header("💬 Ask InsightForge AI")
+
+user_query = st.text_input("Type your question:")
+
+if user_query:
+    try:
+        # Load model
+        llm = models.load_llm()
+
+        # Run Free Mode (local Hugging Face) or Pro Mode (OpenAI)
+        if config.USE_PRO_MODE:
+            response = llm.invoke(user_query)  # OpenAI via LangChain
+            answer = response.content
+        else:
+            response = llm(user_query, max_length=100, num_return_sequences=1)
+            answer = response[0]["generated_text"]
+
+        st.subheader("Answer:")
+        st.write(answer)
+
+    except Exception as e:
+        st.error(f"Error generating response: {e}")
+
