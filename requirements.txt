@@ -1,14 +1,25 @@
+# Core
 streamlit
 pandas
 numpy
 matplotlib
-faiss-cpu
-sentence-transformers
-transformers
+
+# AI / LLMs
+openai
 langchain
 langchain-community
 langchain-openai
+tiktoken
+
+# NLP Embeddings
+sentence-transformers
+faiss-cpu
+
+# Hugging Face Transformers (for Free Mode local models)
+transformers
+torch
+accelerate
+
+# PDF Handling
 pypdf
 PyMuPDF
-tiktoken
-openai
