@@ -1,7 +1,7 @@
 # from config import USE_PRO_MODE
 
 
-# # --- Embeddings ---
+# # --- Embeddings ----
 # def load_embeddings(langchain_openai=None):
 #     if USE_PRO_MODE:
 #         from langchain_openai import OpenAIEmbeddings
